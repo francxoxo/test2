@@ -229,28 +229,15 @@
         <section style="min-height: 100vh;" class="other-2">
             <p>Non mi lasci altra scelta.</p>
 
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="fbdf7f60-690e-4a02-9699-ecfc4b3cb51b">
-                <textarea name="message" placeholder="Scrivimi qualcosa..." required></textarea>
+
+                <textarea name="message" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
                 <button type="submit">Invia</button>
             </form>
-
         </section>
     </main>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const data = new FormData(e.target);
-
-            await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: data
-            });
-
-            window.location.href = 'https://francxoxo.github.io/test/fine.html';
-        });
-    </script>
 </body>
 
 </html>
