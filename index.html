@@ -226,15 +226,23 @@
             <p>Davvero? Ancora?</p>
         </section>
 
-        <section style="min-height: 100vh;" class="other-2">
-            <p>Non mi lasci altra scelta.</p>
+        <section style="min-height: 100vh;" class="other-3">
+            <p id="amica">
+                Non mi lasci altra scelta.
+                <br>
+                Vuoi essere mia amica?
+            </p>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST" class="chat-form">
                 <input type="hidden" name="access_key" value="fbdf7f60-690e-4a02-9699-ecfc4b3cb51b">
 
-                <textarea name="message" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+                <div class="textarea-wrapper">
+                    <textarea name="message" placeholder="Dai! Dai..." required></textarea>
 
-                <button type="submit">Invia</button>
+                    <button type="submit" class="send-btn">
+                        <i class="hgi hgi-stroke hgi-rounded hgi-sent"></i>
+                    </button>
+                </div>
             </form>
         </section>
     </main>
