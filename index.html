@@ -229,16 +229,30 @@
         <section style="min-height: 100vh;" class="other-2">
             <p>Non mi lasci altra scelta.</p>
 
-            <form action="https://formspree.io/f/xnjlyyzv" method="POST">
-                <!-- Redirect personalizzato invece della pagina Formspree -->
+            <form id="contact-form">
                 <input type="hidden" name="_next" value="https://francxoxo.github.io/test/fine.html">
-
                 <textarea name="message" placeholder="Scrivimi qualcosa..." required></textarea>
-
                 <button type="submit">Invia</button>
             </form>
         </section>
     </main>
+
+    
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+
+            await fetch('https://formspree.io/f/xnjlyyzv', {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            window.location.href = 'https://francxoxo.github.io/test/fine.html';
+        });
+    </script>
 </body>
 
 </html>
